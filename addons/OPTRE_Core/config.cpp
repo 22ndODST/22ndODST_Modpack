@@ -1,0 +1,1518 @@
+class CfgPatches
+{
+	class OPTRE_Core
+	{
+		units[]=
+		{
+			"ModuleOrdnance_F",
+			"ModuleOrdnanceMAC_F"
+		};
+		weapons[]={};
+		requiredVersion=0.1;
+		version=0.11;
+		requiredAddons[]=
+		{
+			"Extended_EventHandlers",
+			"cba_main",
+			"A3_Map_Stratis"
+		};
+		author[]=
+		{
+			"Article 2 Studios"
+		};
+		fileName="OPTRE_Core.pbo";
+	};
+};
+class CfgMods
+{
+	class Mod_Base;
+	class OPTRE: Mod_Base
+	{
+		author="Article 2 Studios";
+		picture="\OPTRE_Core\Data\logo_large_ca.paa";
+		logo="\OPTRE_Core\Data\logo_ca.paa";
+		logoOver="\OPTRE_Core\Data\icon_unsc_ca.paa";
+		logoSmall="\OPTRE_Core\Data\logo_ca.paa";
+		dlcColor[]={0,0,0,1};
+		hideName=0;
+		hidePicture=0;
+		tooltip="OPTRE";
+		tooltipOwned="OPTRE";
+		name="Operation: TREBUCHET";
+		overview="Operation: TREBUCHET is a mod for ArmA 3 that seeks to combine the realistic warfare and sandbox freedoms of ArmA with the assets, characters, and weapons from the popular video game series Halo.";
+		action="https://www.reddit.com/r/OperationTrebuchet/";
+		dir="OPTRE";
+	};
+};
+class CfgFunctions
+{
+	class OPTRE_HEV
+	{
+		class OPTRE_HEV
+		{
+			file="\OPTRE_Core\scripts\HEV";
+			class Init
+			{
+			};
+			class podPrepare
+			{
+			};
+			class podPrepareAI
+			{
+			};
+			class podLaunch
+			{
+			};
+			class podLaunchAI
+			{
+			};
+			class podLaunchInit
+			{
+			};
+			class podLand
+			{
+			};
+			class podLandAI
+			{
+			};
+			class podDoor
+			{
+			};
+			class podDoorAI
+			{
+			};
+			class podCallAI
+			{
+			};
+			class podCallSelf
+			{
+			};
+		};
+	};
+	class OPTRE_HUD
+	{
+		class OPTRE_HUD
+		{
+			file="\OPTRE_Core\scripts\HUD";
+			class Init
+			{
+			};
+			class InitRespawn
+			{
+			};
+			class VisorToggle
+			{
+			};
+			class getHelmet
+			{
+			};
+			class setHelmet
+			{
+			};
+			class LowLightToggle
+			{
+			};
+		};
+	};
+	class OPTRE_Thruster
+	{
+		class OPTRE_Thruster
+		{
+			file="\OPTRE_Core\scripts\Thruster";
+			class Init
+			{
+			};
+			class Engage
+			{
+			};
+			class Disengage
+			{
+			};
+		};
+	};
+	class OPTRE_Magnet
+	{
+		class OPTRE_Magnet
+		{
+			file="\OPTRE_Core\scripts\Magnet";
+			class Init
+			{
+			};
+			class Attach
+			{
+			};
+			class Detach
+			{
+			};
+		};
+	};
+	class OPTRE
+	{
+		class OPTRE
+		{
+			file="\OPTRE_Core\scripts";
+			class FireSupport_MAC
+			{
+			};
+		};
+	};
+};
+class Extended_PostInit_EventHandlers
+{
+	OPTRE_HEV_Fncs_Init="[] spawn OPTRE_HEV_fnc_Init";
+	OPTRE_HUD_Fncs_Init="[] spawn OPTRE_HUD_fnc_Init";
+};
+class RscStdText
+{
+	type=0;
+	idc=-1;
+	style=2;
+	colorBackground[]={1,1,1,1};
+	colorText[]={1,1,1,1};
+	font="puristaMedium";
+	size=1;
+};
+class RscTitles
+{
+	titles[]=
+	{
+		"OPTRE_ODST_HUD_blue"
+	};
+	class OPTRE_ODST_HUD_blue
+	{
+		idd=-1;
+		movingEnable=0;
+		duration=999999999;
+		name="OPTRE_ODST_HUD_blue";
+		sizeEx=256;
+		controls[]=
+		{
+			"OPTRE_ODST_HUD_blue_class"
+		};
+		fadein=0;
+		fadeout=0;
+		class OPTRE_ODST_HUD_blue_class: RscStdText
+		{
+			style=48;
+			x="safeZoneXAbs";
+			y="safeZoneY";
+			w="safeZoneWAbs";
+			h="safeZoneH";
+			text="\OPTRE_Core\scripts\Data\odst_hud_blue_ca.paa";
+			sizeEx=1;
+		};
+	};
+};
+class CfgFactionClasses
+{
+	class OPTRE_UNSC
+	{
+		displayName="UNSCDF";
+		author="Article 2 Studios";
+		priority=1;
+		side=1;
+		icon="\OPTRE_Core\data\icon_UNSC_ca.paa";
+		flag="\OPTRE_Core\Data\flag_UNSC_ca.paa";
+		primaryLanguage="EN";
+		backpack_tf_faction_radio_api="OPTRE_Como_pack_2";
+	};
+	class OPTRE_Ins
+	{
+		displayName="Insurrectionists";
+		author="Article 2 Studios";
+		priority=1;
+		side=0;
+		icon="\OPTRE_Core\data\icon_Ins_ca.paa";
+		flag="\OPTRE_Core\Data\flag_Ins_ca.paa";
+		primaryLanguage="EN";
+		backpack_tf_faction_radio_api="OPTRE_Como_pack_2";
+	};
+	class OPTRE_CAA
+	{
+		displayName="CAA";
+		author="Article 2 Studios";
+		priority=1;
+		side=2;
+		icon="\OPTRE_Core\data\icon_caa_ca.paa";
+		flag="\OPTRE_Core\Data\flag_caa_ca.paa";
+		primaryLanguage="EN";
+	};
+	class OPTRE_UEG_Civ
+	{
+		displayName="Civilians (UEG)";
+		author="Article 2 Studios";
+		priority=1;
+		side=3;
+		primaryLanguage="EN";
+	};
+	class OPTRE_Modules
+	{
+		displayName="OPTRE Modules";
+		priority=1;
+		side=7;
+	};
+};
+class CfgVehicleClasses
+{
+	class OPTRE_UNSC_Backpack_class
+	{
+		displayName="Backpacks (UNSC)";
+		author="Article 2 Studios";
+		scope=2;
+		scopeArsenal=2;
+		scopeCurator=2;
+	};
+	class OPTRE_UNSC_Vehicle_class
+	{
+		displayName="Cars (UNSC)";
+		author="Article 2 Studios";
+		scope=2;
+		scopeArsenal=2;
+		scopeCurator=2;
+	};
+	class OPTRE_UNSC_Armored_class
+	{
+		displayName="Armored (UNSC)";
+		author="Article 2 Studios";
+		scope=2;
+		scopeArsenal=2;
+		scopeCurator=2;
+	};
+	class OPTRE_UNSC_Air_class
+	{
+		displayName="Air (UNSC)";
+		author="Article 2 Studios";
+		scope=2;
+		scopeArsenal=2;
+		scopeCurator=2;
+	};
+	class OPTRE_UNSC_Auto_class
+	{
+		displayName="Autonomous (UNSC)";
+		author="Article 2 Studios";
+		scope=2;
+		scopeArsenal=2;
+		scopeCurator=2;
+	};
+	class OPTRE_UNSC_Man_Army_class
+	{
+		displayName="Men (Army)";
+		author="Article 2 Studios";
+		scope=2;
+		scopeArsenal=2;
+		scopeCurator=2;
+	};
+	class OPTRE_UNSC_Man_Army_W_class
+	{
+		displayName="Men (Army Woodland)";
+		author="Article 2 Studios";
+		scope=2;
+		scopeArsenal=2;
+		scopeCurator=2;
+	};
+	class OPTRE_UNSC_Man_Army_D_class
+	{
+		displayName="Men (Army Desert)";
+		author="Article 2 Studios";
+		scope=2;
+		scopeArsenal=2;
+		scopeCurator=2;
+	};
+	class OPTRE_UNSC_Man_Army_S_class
+	{
+		displayName="Men (Army Snow)";
+		author="Article 2 Studios";
+		scope=2;
+		scopeArsenal=2;
+		scopeCurator=2;
+	};
+	class OPTRE_UNSC_Man_Army_T_class
+	{
+		displayName="Men (Army Tropic)";
+		author="Article 2 Studios";
+		scope=2;
+		scopeArsenal=2;
+		scopeCurator=2;
+	};
+	class OPTRE_UNSC_Man_Army_A_class
+	{
+		displayName="Men (Army Arid)";
+		author="Article 2 Studios";
+		scope=2;
+		scopeArsenal=2;
+		scopeCurator=2;
+	};
+	class OPTRE_UNSC_Man_Marines_class
+	{
+		displayName="Men (Marines)";
+		author="Article 2 Studios";
+		scope=2;
+		scopeArsenal=2;
+		scopeCurator=2;
+	};
+	class OPTRE_UNSC_Man_ODST_class
+	{
+		displayName="Men (ODST)";
+		author="Article 2 Studios";
+		scope=2;
+		scopeArsenal=2;
+		scopeCurator=2;
+	};
+	class OPTRE_UNSC_Man_Special_class
+	{
+		displayName="Men (Special)";
+		author="Article 2 Studios";
+		scope=2;
+		scopeArsenal=2;
+		scopeCurator=2;
+	};
+	class OPTRE_UNSC_Man_Training_class
+	{
+		displayName="Men (Training)";
+		author="Article 2 Studios";
+		scope=2;
+		scopeArsenal=2;
+		scopeCurator=2;
+	};
+	class OPTRE_UNSC_Man_Navy_class
+	{
+		displayName="Men (Navy)";
+		author="Article 2 Studios";
+		scope=2;
+		scopeArsenal=2;
+		scopeCurator=2;
+	};
+	class OPTRE_UNSC_Man_Airforce_class
+	{
+		displayName="Men (Air Force)";
+		author="Article 2 Studios";
+		scope=2;
+		scopeArsenal=2;
+		scopeCurator=2;
+	};
+	class OPTRE_UNSC_Man_ONI_class
+	{
+		displayName="Men (ONI)";
+		author="Article 2 Studios";
+		scope=2;
+		scopeArsenal=2;
+		scopeCurator=2;
+	};
+	class OPTRE_UNSC_Object_class
+	{
+		displayName="Objects (UNSC)";
+		author="Article 2 Studios";
+		scope=2;
+		scopeArsenal=2;
+		scopeCurator=2;
+	};
+	class OPTRE_UNSC_Structure_class
+	{
+		displayName="Structures (UNSC)";
+		author="Article 2 Studios";
+		scope=2;
+		scopeArsenal=2;
+		scopeCurator=2;
+	};
+	class OPTRE_UNSC_Fortification_class
+	{
+		displayName="Fortifications (UNSC)";
+		author="Article 2 Studios";
+		scope=2;
+		scopeArsenal=2;
+		scopeCurator=2;
+	};
+	class OPTRE_UNSC_Ammo_class
+	{
+		displayName="Ammo (UNSC)";
+		author="Article 2 Studios";
+		scope=2;
+		scopeArsenal=2;
+		scopeCurator=2;
+	};
+	class OPTRE_UNSC_HEV_class
+	{
+		displayName="HEVs (UNSC)";
+		author="Article 2 Studios";
+		scope=2;
+		scopeArsenal=2;
+		scopeCurator=2;
+	};
+	class OPTRE_Ins_Backpack_class
+	{
+		displayName="Backpacks (Ins)";
+		author="Article 2 Studios";
+		scope=2;
+		scopeArsenal=2;
+		scopeCurator=2;
+	};
+	class OPTRE_Ins_Vehicle_class
+	{
+		displayName="Cars (Ins)";
+		author="Article 2 Studios";
+		scope=2;
+		scopeArsenal=2;
+		scopeCurator=2;
+	};
+	class OPTRE_Ins_Armored_class
+	{
+		displayName="Armored (Ins)";
+		author="Article 2 Studios";
+		scope=2;
+		scopeArsenal=2;
+		scopeCurator=2;
+	};
+	class OPTRE_Ins_Air_class
+	{
+		displayName="Air (Ins)";
+		author="Article 2 Studios";
+		scope=2;
+		scopeArsenal=2;
+		scopeCurator=2;
+	};
+	class OPTRE_Ins_Auto_class
+	{
+		displayName="Autonomous (Ins)";
+		author="Article 2 Studios";
+		scope=2;
+		scopeArsenal=2;
+		scopeCurator=2;
+	};
+	class OPTRE_Ins_Man_ER_class
+	{
+		displayName="Men (Eridanus Rebels)";
+		author="Article 2 Studios";
+		scope=2;
+		scopeArsenal=2;
+		scopeCurator=2;
+	};
+	class OPTRE_Ins_Man_URF_class
+	{
+		displayName="Men (United Rebel Front)";
+		author="Article 2 Studios";
+		scope=2;
+		scopeArsenal=2;
+		scopeCurator=2;
+	};
+	class OPTRE_Ins_Man_Special_class
+	{
+		displayName="Men (Special)";
+		author="Article 2 Studios";
+		scope=2;
+		scopeArsenal=2;
+		scopeCurator=2;
+	};
+	class OPTRE_Ins_Object_class
+	{
+		displayName="Objects (Ins)";
+		author="Article 2 Studios";
+		scope=2;
+		scopeArsenal=2;
+		scopeCurator=2;
+	};
+	class OPTRE_Ins_Structure_class
+	{
+		displayName="Structures (Ins)";
+		author="Article 2 Studios";
+		scope=2;
+		scopeArsenal=2;
+		scopeCurator=2;
+	};
+	class OPTRE_Ins_Fortification_class
+	{
+		displayName="Fortifications (Ins)";
+		author="Article 2 Studios";
+		scope=2;
+		scopeArsenal=2;
+		scopeCurator=2;
+	};
+	class OPTRE_Ins_Ammo_class
+	{
+		displayName="Ammo (Ins)";
+		author="Article 2 Studios";
+		scope=2;
+		scopeArsenal=2;
+		scopeCurator=2;
+	};
+};
+class CfgMissions
+{
+	class Cutscenes
+	{
+		class Stratis_intro1
+		{
+			directory="OPTRE_Core\scenes\OPTRE_Intro1.Stratis";
+		};
+		class Altis_intro1
+		{
+			directory="OPTRE_Core\scenes\OPTRE_Intro1.Altis";
+		};
+	};
+};
+class CfgMusicClasses
+{
+	class OPTRE_OST
+	{
+		displayName="OPTRE Soundtrack";
+		author="Article 2 Studios";
+	};
+};
+class CfgSounds
+{
+	sounds[]=
+	{
+		"OPTRE_Sounds_HEV_Wind1",
+		"OPTRE_Sounds_HEV_Wind2",
+		"OPTRE_Sounds_HEV_Pop",
+		"OPTRE_Sounds_HEV_Door",
+		"OPTRE_Sounds_HEV_Chute",
+		"OPTRE_Sounds_HUD_Visor",
+		"OPTRE_Sounds_Alarm"
+	};
+	class OPTRE_Sounds_HEV_Wind1
+	{
+		name="[OPTRE] HEV Wind 1";
+		sound[]=
+		{
+			"\OPTRE_core\data\sounds\OPTRE_Sounds_HEV_Wind1.ogg",
+			1,
+			1
+		};
+		author="Article 2 Studios";
+		titles[]={};
+	};
+	class OPTRE_Sounds_HEV_Wind2
+	{
+		name="[OPTRE] HEV Wind 2";
+		sound[]=
+		{
+			"\OPTRE_core\data\sounds\OPTRE_Sounds_HEV_Wind2.ogg",
+			1,
+			1
+		};
+		author="Article 2 Studios";
+		titles[]={};
+	};
+	class OPTRE_Sounds_HEV_Pop
+	{
+		name="[OPTRE] HEV Pop";
+		sound[]=
+		{
+			"\OPTRE_core\data\sounds\OPTRE_Sounds_HEV_Pop.ogg",
+			1,
+			1
+		};
+		author="Article 2 Studios";
+		titles[]={};
+	};
+	class OPTRE_Sounds_HEV_Door
+	{
+		name="[OPTRE] HEV Door";
+		sound[]=
+		{
+			"\OPTRE_core\data\sounds\OPTRE_Sounds_HEV_Door.ogg",
+			1,
+			1
+		};
+		author="Article 2 Studios";
+		titles[]={};
+	};
+	class OPTRE_Sounds_HEV_Chute
+	{
+		name="[OPTRE] HEV Chute";
+		sound[]=
+		{
+			"\OPTRE_core\data\sounds\OPTRE_Sounds_HEV_Chute.ogg",
+			1,
+			1
+		};
+		author="Article 2 Studios";
+		titles[]={};
+	};
+	class OPTRE_Sounds_HUD_Visor
+	{
+		name="[OPTRE] HUD Visor";
+		sound[]=
+		{
+			"\OPTRE_core\data\sounds\OPTRE_Sounds_Visor.ogg",
+			0.25,
+			1
+		};
+		author="Article 2 Studios";
+		titles[]={};
+	};
+	class OPTRE_Sounds_Alarm
+	{
+		name="[OPTRE] Alarm";
+		sound[]=
+		{
+			"\OPTRE_core\data\sounds\OPTRE_Sounds_Alarm.ogg",
+			1,
+			1
+		};
+		author="Article 2 Studios";
+		titles[]={};
+	};
+};
+class CfgMusic
+{
+	class OPTRE_Music_Amber
+	{
+		name="[OPTRE] Amber";
+		sound[]=
+		{
+			"\OPTRE_Core\Music\OPTRE_Amber.ogg",
+			1,
+			1
+		};
+		author="Article 2 Studios";
+		musicClass="OPTRE_OST";
+		duration=157;
+	};
+	class OPTRE_Music_Axios
+	{
+		name="[OPTRE] Axios";
+		sound[]=
+		{
+			"\OPTRE_Core\Music\OPTRE_Axios.ogg",
+			1,
+			1
+		};
+		author="Article 2 Studios";
+		musicClass="OPTRE_OST";
+		duration=162;
+	};
+	class OPTRE_Music_Bound
+	{
+		name="[OPTRE] Bound";
+		sound[]=
+		{
+			"\OPTRE_Core\Music\OPTRE_Bound.ogg",
+			1,
+			1
+		};
+		author="Article 2 Studios";
+		musicClass="OPTRE_OST";
+		duration=36;
+	};
+	class OPTRE_Music_Brave
+	{
+		name="[OPTRE] Brave";
+		sound[]=
+		{
+			"\OPTRE_Core\Music\OPTRE_Brave.ogg",
+			1,
+			1
+		};
+		author="Article 2 Studios";
+		musicClass="OPTRE_OST";
+		duration=90;
+	};
+	class OPTRE_Music_CallToArms
+	{
+		name="[OPTRE] Call To Arms";
+		sound[]=
+		{
+			"\OPTRE_Core\Music\OPTRE_CallToArms.ogg",
+			1,
+			1
+		};
+		author="Article 2 Studios";
+		musicClass="OPTRE_OST";
+		duration=68;
+	};
+	class OPTRE_Music_ChooseWisely
+	{
+		name="[OPTRE] Choose Wisely";
+		sound[]=
+		{
+			"\OPTRE_Core\Music\OPTRE_ChooseWisely.ogg",
+			1,
+			1
+		};
+		author="Article 2 Studios";
+		musicClass="OPTRE_OST";
+		duration=76;
+	};
+	class OPTRE_Music_CloseQuarters
+	{
+		name="[OPTRE] Close Quarters";
+		sound[]=
+		{
+			"\OPTRE_Core\Music\OPTRE_CloseQuarters.ogg",
+			1,
+			1
+		};
+		author="Article 2 Studios";
+		musicClass="OPTRE_OST";
+		duration=70;
+	};
+	class OPTRE_Music_LoopCloseQuarters
+	{
+		name="[OPTRE] Close Quarters (Loop)";
+		sound[]=
+		{
+			"\OPTRE_Core\Music\OPTRE_LoopCloseQuarters.ogg",
+			1,
+			1
+		};
+		author="Article 2 Studios";
+		musicClass="OPTRE_OST";
+		duration=42;
+	};
+	class OPTRE_Music_CovenantDance
+	{
+		name="[OPTRE] Covenant Dance";
+		sound[]=
+		{
+			"\OPTRE_Core\Music\OPTRE_CovenantDance.ogg",
+			1,
+			1
+		};
+		author="Article 2 Studios";
+		musicClass="OPTRE_OST";
+		duration=119;
+	};
+	class OPTRE_Music_LoopDefense
+	{
+		name="[OPTRE] Defense (Loop)";
+		sound[]=
+		{
+			"\OPTRE_Core\Music\OPTRE_LoopDefense.ogg",
+			1,
+			1
+		};
+		author="Article 2 Studios";
+		musicClass="OPTRE_OST";
+		duration=58;
+	};
+	class OPTRE_Music_DesperateMeasures
+	{
+		name="[OPTRE] Desperate Measures";
+		sound[]=
+		{
+			"\OPTRE_Core\Music\OPTRE_DesperateMeasures.ogg",
+			1,
+			1
+		};
+		author="Article 2 Studios";
+		musicClass="OPTRE_OST";
+		duration=147;
+	};
+	class OPTRE_Music_DesperateDefense
+	{
+		name="[OPTRE] Desperate Defense";
+		sound[]=
+		{
+			"\OPTRE_Core\Music\OPTRE_DesperateDefense.ogg",
+			1,
+			1
+		};
+		author="Article 2 Studios";
+		musicClass="OPTRE_OST";
+		duration=120;
+	};
+	class OPTRE_Music_DrumRun
+	{
+		name="[OPTRE] Drum Run";
+		sound[]=
+		{
+			"\OPTRE_Core\Music\OPTRE_DrumRun.ogg",
+			1,
+			1
+		};
+		author="Article 2 Studios";
+		musicClass="OPTRE_OST";
+		duration=67;
+	};
+	class OPTRE_Music_Engaged
+	{
+		name="[OPTRE] Engaged";
+		sound[]=
+		{
+			"\OPTRE_Core\Music\OPTRE_Engaged.ogg",
+			1,
+			1
+		};
+		author="Article 2 Studios";
+		musicClass="OPTRE_OST";
+		duration=92;
+	};
+	class OPTRE_Music_EveOfBattle
+	{
+		name="[OPTRE] Eve Of Battle";
+		sound[]=
+		{
+			"\OPTRE_Core\Music\OPTRE_EveOfBattle.ogg",
+			1,
+			1
+		};
+		author="Article 2 Studios";
+		musicClass="OPTRE_OST";
+		duration=68;
+	};
+	class OPTRE_Music_FalconMix
+	{
+		name="[OPTRE] Falcon Mix";
+		sound[]=
+		{
+			"\OPTRE_Core\Music\OPTRE_FalconMix.ogg",
+			1,
+			1
+		};
+		author="Article 2 Studios";
+		musicClass="OPTRE_OST";
+		duration=149;
+	};
+	class OPTRE_Music_Farthest
+	{
+		name="[OPTRE] Farthest";
+		sound[]=
+		{
+			"\OPTRE_Core\Music\OPTRE_Farthest.ogg",
+			1,
+			1
+		};
+		author="Article 2 Studios";
+		musicClass="OPTRE_OST";
+		duration=81;
+	};
+	class OPTRE_Music_FinalDawn
+	{
+		name="[OPTRE] Final Dawn";
+		sound[]=
+		{
+			"\OPTRE_Core\Music\OPTRE_FinalDawn.ogg",
+			1,
+			1
+		};
+		author="Article 2 Studios";
+		musicClass="OPTRE_OST";
+		duration=111;
+	};
+	class OPTRE_Music_Firefight
+	{
+		name="[OPTRE] Firefight";
+		sound[]=
+		{
+			"\OPTRE_Core\Music\OPTRE_Firefight.ogg",
+			1,
+			1
+		};
+		author="Article 2 Studios";
+		musicClass="OPTRE_OST";
+		duration=104;
+	};
+	class OPTRE_Music_FleetOps
+	{
+		name="[OPTRE] Fleet Ops";
+		sound[]=
+		{
+			"\OPTRE_Core\Music\OPTRE_FleetOps.ogg",
+			1,
+			1
+		};
+		author="Article 2 Studios";
+		musicClass="OPTRE_OST";
+		duration=213;
+	};
+	class OPTRE_Music_GoingLoud
+	{
+		name="[OPTRE] Going Loud";
+		sound[]=
+		{
+			"\OPTRE_Core\Music\OPTRE_GoingLoud.ogg",
+			1,
+			1
+		};
+		author="Article 2 Studios";
+		musicClass="OPTRE_OST";
+		duration=191;
+	};
+	class OPTRE_Music_Guess
+	{
+		name="[OPTRE] Guess";
+		sound[]=
+		{
+			"\OPTRE_Core\Music\OPTRE_Guess.ogg",
+			1,
+			1
+		};
+		author="Article 2 Studios";
+		musicClass="OPTRE_OST";
+		duration=177;
+	};
+	class OPTRE_Music_Impend
+	{
+		name="[OPTRE] Impend";
+		sound[]=
+		{
+			"\OPTRE_Core\Music\OPTRE_Impend.ogg",
+			1,
+			1
+		};
+		author="Article 2 Studios";
+		musicClass="OPTRE_OST";
+		duration=30;
+	};
+	class OPTRE_Music_ImpendThis
+	{
+		name="[OPTRE] Impend This";
+		sound[]=
+		{
+			"\OPTRE_Core\Music\OPTRE_ImpendThis.ogg",
+			1,
+			1
+		};
+		author="Article 2 Studios";
+		musicClass="OPTRE_OST";
+		duration=203;
+	};
+	class OPTRE_Music_InAmberClad
+	{
+		name="[OPTRE] In Amber Clad";
+		sound[]=
+		{
+			"\OPTRE_Core\Music\OPTRE_InAmberClad.ogg",
+			1,
+			1
+		};
+		author="Article 2 Studios";
+		musicClass="OPTRE_OST";
+		duration=203;
+	};
+	class OPTRE_Music_InnieDance
+	{
+		name="[OPTRE] Innie Dance";
+		sound[]=
+		{
+			"\OPTRE_Core\Music\OPTRE_InnieDance.ogg",
+			1,
+			1
+		};
+		author="Article 2 Studios";
+		musicClass="OPTRE_OST";
+		duration=236;
+	};
+	class OPTRE_Music_Introductions
+	{
+		name="[OPTRE] Introductions";
+		sound[]=
+		{
+			"\OPTRE_Core\Music\OPTRE_Introductions.ogg",
+			1,
+			1
+		};
+		author="Article 2 Studios";
+		musicClass="OPTRE_OST";
+		duration=210;
+	};
+	class OPTRE_Music_Jeopardy
+	{
+		name="[OPTRE] Jeopardy";
+		sound[]=
+		{
+			"\OPTRE_Core\Music\OPTRE_Jeopardy.ogg",
+			1,
+			1
+		};
+		author="Article 2 Studios";
+		musicClass="OPTRE_OST";
+		duration=187;
+	};
+	class OPTRE_Music_JeopardyDrums
+	{
+		name="[OPTRE] Jeopardy (Drums)";
+		sound[]=
+		{
+			"\OPTRE_Core\Music\OPTRE_JeopardyDrums.ogg",
+			1,
+			1
+		};
+		author="Article 2 Studios";
+		musicClass="OPTRE_OST";
+		duration=187;
+	};
+	class OPTRE_Music_LeadTrackRedux
+	{
+		name="[OPTRE] Lead Track Redux";
+		sound[]=
+		{
+			"\OPTRE_Core\Music\OPTRE_LeadTrackRedux.ogg",
+			1,
+			1
+		};
+		author="Article 2 Studios";
+		musicClass="OPTRE_OST";
+		duration=163;
+	};
+	class OPTRE_Music_Life
+	{
+		name="[OPTRE] Life";
+		sound[]=
+		{
+			"\OPTRE_Core\Music\OPTRE_Life.ogg",
+			1,
+			1
+		};
+		author="Article 2 Studios";
+		musicClass="OPTRE_OST";
+		duration=88;
+	};
+	class OPTRE_Music_LiveAction
+	{
+		name="[OPTRE] Live Action";
+		sound[]=
+		{
+			"\OPTRE_Core\Music\OPTRE_LiveAction.ogg",
+			1,
+			1
+		};
+		author="Article 2 Studios";
+		musicClass="OPTRE_OST";
+		duration=53;
+	};
+	class OPTRE_Music_Luck
+	{
+		name="[OPTRE] Luck";
+		sound[]=
+		{
+			"\OPTRE_Core\Music\OPTRE_Luck.ogg",
+			1,
+			1
+		};
+		author="Article 2 Studios";
+		musicClass="OPTRE_OST";
+		duration=42;
+	};
+	class OPTRE_Music_MjolnirRemastered
+	{
+		name="[OPTRE] Mjolnir Mix (Remastered)";
+		sound[]=
+		{
+			"\OPTRE_Core\Music\OPTRE_MjolnirRemastered.ogg",
+			1,
+			1
+		};
+		author="Article 2 Studios";
+		musicClass="OPTRE_OST";
+		duration=251;
+	};
+	class OPTRE_Music_MoonsOverEridanus
+	{
+		name="[OPTRE] Moons Over Eridanus";
+		sound[]=
+		{
+			"\OPTRE_Core\Music\OPTRE_MoonsOverEridanus.ogg",
+			1,
+			1
+		};
+		author="Article 2 Studios";
+		musicClass="OPTRE_OST";
+		duration=68;
+	};
+	class OPTRE_Music_Movement
+	{
+		name="[OPTRE] Movement";
+		sound[]=
+		{
+			"\OPTRE_Core\Music\OPTRE_Movement.ogg",
+			1,
+			1
+		};
+		author="Article 2 Studios";
+		musicClass="OPTRE_OST";
+		duration=27;
+	};
+	class OPTRE_Music_LoopNeverForget
+	{
+		name="[OPTRE] Never Forget (Loop)";
+		sound[]=
+		{
+			"\OPTRE_Core\Music\OPTRE_LoopNeverForget.ogg",
+			1,
+			1
+		};
+		author="Article 2 Studios";
+		musicClass="OPTRE_OST";
+		duration=59;
+	};
+	class OPTRE_Music_NightOps
+	{
+		name="[OPTRE] Night Ops";
+		sound[]=
+		{
+			"\OPTRE_Core\Music\OPTRE_NightOps.ogg",
+			1,
+			1
+		};
+		author="Article 2 Studios";
+		musicClass="OPTRE_OST";
+		duration=168;
+	};
+	class OPTRE_Music_LoopNightRun
+	{
+		name="[OPTRE] Night Run (Loop)";
+		sound[]=
+		{
+			"\OPTRE_Core\Music\OPTRE_NightOps.ogg",
+			1,
+			1
+		};
+		author="Article 2 Studios";
+		musicClass="OPTRE_OST";
+		duration=42;
+	};
+	class OPTRE_Music_OurBrothers
+	{
+		name="[OPTRE] Our Brothers";
+		sound[]=
+		{
+			"\OPTRE_Core\Music\OPTRE_OurBrothers.ogg",
+			1,
+			1
+		};
+		author="Article 2 Studios";
+		musicClass="OPTRE_OST";
+		duration=64;
+	};
+	class OPTRE_Music_Outpost
+	{
+		name="[OPTRE] Outpost";
+		sound[]=
+		{
+			"\OPTRE_Core\Music\OPTRE_Outpost.ogg",
+			1,
+			1
+		};
+		author="Article 2 Studios";
+		musicClass="OPTRE_OST";
+		duration=152;
+	};
+	class OPTRE_Music_OverTheHills
+	{
+		name="[OPTRE] Over The Hills";
+		sound[]=
+		{
+			"\OPTRE_Core\Music\OPTRE_OverTheHills.ogg",
+			1,
+			1
+		};
+		author="Article 2 Studios";
+		musicClass="OPTRE_OST";
+		duration=115;
+	};
+	class OPTRE_Music_PerilAndJeopardy
+	{
+		name="[OPTRE] Peril And Jeopardy";
+		sound[]=
+		{
+			"\OPTRE_Core\Music\OPTRE_PerilAndJeopardy.ogg",
+			1,
+			1
+		};
+		author="Article 2 Studios";
+		musicClass="OPTRE_OST";
+		duration=167;
+	};
+	class OPTRE_Music_PerilousJourney
+	{
+		name="[OPTRE] Perilous Journey";
+		sound[]=
+		{
+			"\OPTRE_Core\Music\OPTRE_PerilousJourney.ogg",
+			1,
+			1
+		};
+		author="Article 2 Studios";
+		musicClass="OPTRE_OST";
+		duration=146;
+	};
+	class OPTRE_Music_PrepareToDrop
+	{
+		name="[OPTRE] Prepare To Drop";
+		sound[]=
+		{
+			"\OPTRE_Core\Music\OPTRE_PrepareToDrop.ogg",
+			1,
+			1
+		};
+		author="Article 2 Studios";
+		musicClass="OPTRE_OST";
+		duration=216;
+	};
+	class OPTRE_Music_Recon
+	{
+		name="[OPTRE] Recon";
+		sound[]=
+		{
+			"\OPTRE_Core\Music\OPTRE_Recon.ogg",
+			1,
+			1
+		};
+		author="Article 2 Studios";
+		musicClass="OPTRE_OST";
+		duration=60;
+	};
+	class OPTRE_Music_RescueMission
+	{
+		name="[OPTRE] Rescue Mission";
+		sound[]=
+		{
+			"\OPTRE_Core\Music\OPTRE_RescueMission.ogg",
+			1,
+			1
+		};
+		author="Article 2 Studios";
+		musicClass="OPTRE_OST";
+		duration=137;
+	};
+	class OPTRE_Music_RollingOut
+	{
+		name="[OPTRE] Rolling Out";
+		sound[]=
+		{
+			"\OPTRE_Core\Music\OPTRE_RollingOut.ogg",
+			1,
+			1
+		};
+		author="Article 2 Studios";
+		musicClass="OPTRE_OST";
+		duration=34;
+	};
+	class OPTRE_Music_RockAnthemToSaveTheWorld
+	{
+		name="[OPTRE] Rock Anthem To Save The World";
+		sound[]=
+		{
+			"\OPTRE_Core\Music\OPTRE_RockAnthemToSaveTheWorld.ogg",
+			1,
+			1
+		};
+		author="Article 2 Studios";
+		musicClass="OPTRE_OST";
+		duration=187;
+	};
+	class OPTRE_Music_Run
+	{
+		name="[OPTRE] Run";
+		sound[]=
+		{
+			"\OPTRE_Core\Music\OPTRE_Run.ogg",
+			1,
+			1
+		};
+		author="Article 2 Studios";
+		musicClass="OPTRE_OST";
+		duration=34;
+	};
+	class OPTRE_Music_ScorpionMix
+	{
+		name="[OPTRE] Scorpion Mix";
+		sound[]=
+		{
+			"\OPTRE_Core\Music\OPTRE_ScorpionMix.ogg",
+			1,
+			1
+		};
+		author="Article 2 Studios";
+		musicClass="OPTRE_OST";
+		duration=188;
+	};
+	class OPTRE_Music_SignalLost
+	{
+		name="[OPTRE] Signal Lost";
+		sound[]=
+		{
+			"\OPTRE_Core\Music\OPTRE_SignalLost.ogg",
+			1,
+			1
+		};
+		author="Article 2 Studios";
+		musicClass="OPTRE_OST";
+		duration=16;
+	};
+	class OPTRE_Music_Shotgun
+	{
+		name="[OPTRE] Shotgun";
+		sound[]=
+		{
+			"\OPTRE_Core\Music\OPTRE_Shotgun.ogg",
+			1,
+			1
+		};
+		author="Article 2 Studios";
+		musicClass="OPTRE_OST";
+		duration=132;
+	};
+	class OPTRE_Music_ThroughTheWoods
+	{
+		name="[OPTRE] Through The Woods";
+		sound[]=
+		{
+			"\OPTRE_Core\Music\OPTRE_ThroughTheWoods.ogg",
+			1,
+			1
+		};
+		author="Article 2 Studios";
+		musicClass="OPTRE_OST";
+		duration=89;
+	};
+	class OPTRE_Music_ToGalaxy
+	{
+		name="[OPTRE] To Galaxy";
+		sound[]=
+		{
+			"\OPTRE_Core\Music\OPTRE_ToGalaxy.ogg",
+			1,
+			1
+		};
+		author="Article 2 Studios";
+		musicClass="OPTRE_OST";
+		duration=239;
+	};
+	class OPTRE_Music_UnderCoverOfMoonlight
+	{
+		name="[OPTRE] Under Cover Of Moonlight";
+		sound[]=
+		{
+			"\OPTRE_Core\Music\OPTRE_UnderCoverOfMoonlight.ogg",
+			1,
+			1
+		};
+		author="Article 2 Studios";
+		musicClass="OPTRE_OST";
+		duration=68;
+	};
+	class OPTRE_Music_Unforgotten
+	{
+		name="[OPTRE] Unforgotten";
+		sound[]=
+		{
+			"\OPTRE_Core\Music\OPTRE_Unforgotten.ogg",
+			1,
+			1
+		};
+		author="Article 2 Studios";
+		musicClass="OPTRE_OST";
+		duration=60;
+	};
+	class OPTRE_Music_Wandering
+	{
+		name="[OPTRE] Wandering";
+		sound[]=
+		{
+			"\OPTRE_Core\Music\OPTRE_Wandering.ogg",
+			1,
+			1
+		};
+		author="Article 2 Studios";
+		musicClass="OPTRE_OST";
+		duration=46;
+	};
+	class OPTRE_Music_WarsTribute
+	{
+		name="[OPTRE] Wars Tribute";
+		sound[]=
+		{
+			"\OPTRE_Core\Music\OPTRE_WarsTribute.ogg",
+			1,
+			1
+		};
+		author="Article 2 Studios";
+		musicClass="OPTRE_OST";
+		duration=65;
+	};
+	class OPTRE_Music_Warthogs
+	{
+		name="[OPTRE] Warthogs";
+		sound[]=
+		{
+			"\OPTRE_Core\Music\OPTRE_Wandering.ogg",
+			1,
+			1
+		};
+		author="Article 2 Studios";
+		musicClass="OPTRE_OST";
+		duration=130;
+	};
+};
+class CfgVehicles
+{
+	class Logic;
+	class Module_F: Logic
+	{
+		class ModuleDescription
+		{
+			class AnyPlayer;
+			class AnyBrain;
+			class EmptyDetector;
+		};
+	};
+	class ModuleOrdnance_F: Module_F
+	{
+		author="$STR_A3_Bohemia_Interactive";
+		_generalMacro="ModuleOrdnance_F";
+		scope=2;
+		category="Effects";
+		function="BIS_fnc_moduleProjectile";
+		isGlobal=0;
+		isTriggerActivated=1;
+		displayName="$STR_A3_CfgVehicles_ModuleOrdnance_F";
+		icon="\a3\Modules_F_Curator\Data\iconOrdnance_ca.paa";
+		portrait="\a3\Modules_F_Curator\Data\portraitOrdnance_ca.paa";
+		class Arguments
+		{
+			class Type
+			{
+				displayName="$STR_A3_CfgVehicles_ModuleOrdnance_F_Arguments_Type";
+				description="";
+				class values
+				{
+					class Mortar
+					{
+						name="$STR_A3_CfgVehicles_ModuleOrdnanceMortar_F";
+						value="ModuleOrdnanceMortar_F_Ammo";
+						default=1;
+					};
+					class Howitzer
+					{
+						name="$STR_A3_CfgVehicles_ModuleOrdnanceHowitzer_F";
+						value="ModuleOrdnanceHowitzer_F_Ammo";
+					};
+					class Rocket
+					{
+						name="$STR_A3_CfgVehicles_ModuleOrdnanceRocket_F";
+						value="ModuleOrdnanceRocket_F_Ammo";
+					};
+					class MAC
+					{
+						name="MAC Strike";
+						value="OPTRE_MAC_Round";
+					};
+				};
+			};
+		};
+		class ModuleDescription: ModuleDescription
+		{
+			description="$STR_A3_CfgVehicles_ModuleOrdnance_F_ModuleDescription";
+			position=1;
+		};
+	};
+	class ModuleOrdnanceMAC_F: ModuleOrdnance_F
+	{
+		author="Article 2 Studios";
+		_generalMacro="ModuleOrdnanceMAC_F";
+		scope=1;
+		scopeCurator=2;
+		isGlobal=1;
+		category="Ordnance";
+		displayName="MAC Strike";
+		portrait="\a3\Modules_F_Curator\Data\portraitOrdnanceRocket_ca.paa";
+		ammo="OPTRE_MAC_Round";
+		delete Arguments;
+		simulation="house";
+		model="\a3\Modules_F_Curator\Ordnance\surfaceRocket.p3d";
+		curatorCost=10;
+	};
+};

@@ -1,0 +1,1 @@
+_initRespawn_fnc = [] spawn OPTRE_HUD_fnc_InitRespawn;
