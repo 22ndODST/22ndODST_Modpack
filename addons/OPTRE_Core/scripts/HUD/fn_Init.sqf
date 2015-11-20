@@ -18,24 +18,7 @@ while {time > 0} do {
 	 _getHelmet_fnc = [] spawn OPTRE_HUD_fnc_getHelmet;
 	if ((OPTRE_HUD_Type == 1) && (cameraView != "EXTERNAL") && (cameraOn == player)) then {
 		117 cutRsc ["OPTRE_ODST_HUD_blue", "PLAIN", 0, true];
-	} then {
-		117 cutRsc ["OPTRE_ODST_HUD_off", "PLAIN", 0, false];
 	}; else {
-		117 cuttext ["", "PLAIN"];
-	};
-	if (!OPTRE_HUD_MainCheck) then {
-		setAperture -1;
-		OPTRE_HUD_NVOn = 0;
-	};
-	sleep 0.1;
-};
-
-waitUntil {time > 0};    
-while {time > 0} do {
-	 _getHelmet_fnc = [] spawn OPTRE_HUD_fnc_getHelmet;
-	if ((OPTRE_HUD_Type == 2) && (cameraView != "EXTERNAL") && (cameraOn == player)) then {
-		117 cutRsc ["OPTRE_ODST_HUD_off", "PLAIN", 0, false];
-	} else {
 		117 cuttext ["", "PLAIN"];
 	};
 	if (!OPTRE_HUD_MainCheck) then {
