@@ -116,17 +116,6 @@ class 22nd_odst_base: B_Soldier_F
 		visual="injury_body";
 		minimalHit=0.0099999998;
 	};
-	class HitBody
-	{
-		armor=1;
-		material=-1;
-		name="body";
-		passThrough=1;
-		radius=0.15000001;
-		explosionShielding=10;
-		visual="injury_body";
-		minimalHit=0.0099999998;
-	};
 	class HitLeftArm
 	{
 		armor=1;
@@ -251,11 +240,51 @@ class 22nd_odst_kripto202: 22nd_odst_base
 		"camo1",
 		"insignia",
 		"clan",
-		"attach_rightsholder"
+		"attach_rightshoulder"
 	};
 	hiddenSelectionsTextures[]=
 	{
 		"22_odst_units\data\uniform\odst_kripto202_l0_armor.paa"
+	};
+};
+
+class 22nd_odst_marpat_kripto202: 22nd_odst_kripto202
+{
+	scope=2;
+	scopeCurator=1;
+	scopeArsenal = 2;
+	displayName="[ODST] Marpat M.Kripto";
+	uniformClass="22nd_ODST_marpat_kripto202_sniper_uniform";
+	hiddenSelections[]=
+	{
+		"camo1",
+		"insignia",
+		"clan",
+		"attach_rightshoulder"
+	};
+	hiddenSelectionsTextures[]=
+	{
+		"22_odst_units\data\uniform\odst_kripto202_l0_marpat_armor.paa"
+	};
+};
+
+class 22nd_odst_marpat_desert_kripto202: 22nd_odst_kripto202
+{
+	scope=2;
+	scopeCurator=1;
+	scopeArsenal = 2;
+	displayName="[ODST] Marpat Desert M.Kripto";
+	uniformClass="22nd_ODST_marpat_desert_kripto202_sniper_uniform";
+	hiddenSelections[]=
+	{
+		"camo1",
+		"insignia",
+		"clan",
+		"attach_rightshoulder"
+	};
+	hiddenSelectionsTextures[]=
+	{
+		"22_odst_units\data\uniform\odst_kripto202_l0_marpat_desert_armor.paa"
 	};
 };
 
@@ -334,6 +363,44 @@ class 22nd_odst_garrus: 22nd_odst_base
 	};
 };
 
+class 22nd_odst_marpat_garrus: 22nd_odst_garrus
+{
+	scope=2;
+	scopeCurator=1;
+	scopeArsenal = 2;
+	displayName="[ODST] Marpat M.Steros";
+	uniformClass="22nd_ODST_marpat_garrus_comms_uniform";
+	hiddenSelections[]=
+	{
+		"camo1",
+		"insignia",
+		"clan"
+	};
+	hiddenSelectionsTextures[]=
+	{
+		"22_odst_units\data\uniform\odst_garrus_l0_marpat_armor.paa"
+	};
+};
+
+class 22nd_odst_marpat_desert_garrus: 22nd_odst_garrus
+{
+	scope=2;
+	scopeCurator=1;
+	scopeArsenal = 2;
+	displayName="[ODST] Marpat Desert M.Steros";
+	uniformClass="22nd_ODST_marpat_desert_garrus_comms_uniform";
+	hiddenSelections[]=
+	{
+		"camo1",
+		"insignia",
+		"clan"
+	};
+	hiddenSelectionsTextures[]=
+	{
+		"22_odst_units\data\uniform\odst_garrus_l0_marpat_desert_armor.paa"
+	};
+};
+
 ///browerxd\\\
 
 class 22nd_odst_browerxd: 22nd_odst_base
@@ -407,6 +474,44 @@ class 22nd_odst_browerxd: 22nd_odst_base
 	};
 };
 
+class 22nd_odst_marpat_browerxd: 22nd_odst_browerxd
+{
+	scope=2;
+	scopeCurator=1;
+	scopeArsenal = 2;
+	displayName="[ODST] Marpat A.Brower";
+	uniformClass="22nd_ODST_marpat_browerxd_uniform";
+	hiddenSelections[]=
+	{
+		"camo1",
+		"insignia",
+		"clan"
+	};
+	hiddenSelectionsTextures[]=
+	{
+		"22_odst_units\data\uniform\odst_browerxd_l0_marpat_armor.paa"
+	};
+};
+
+class 22nd_odst_marpat_desert_browerxd: 22nd_odst_browerxd
+{
+	scope=2;
+	scopeCurator=1;
+	scopeArsenal = 2;
+	displayName="[ODST] Marpat Desert A.Brower";
+	uniformClass="22nd_ODST_marpat_desert_browerxd_uniform";
+	hiddenSelections[]=
+	{
+		"camo1",
+		"insignia",
+		"clan"
+	};
+	hiddenSelectionsTextures[]=
+	{
+		"22_odst_units\data\uniform\odst_browerxd_l0_marpat_desert_armor.paa"
+	};
+};
+
 ///darren\\\
 
 class 22nd_odst_darren: 22nd_odst_base
@@ -476,6 +581,44 @@ class 22nd_odst_darren: 22nd_odst_base
 	hiddenSelectionsTextures[]=
 	{
 		"22_odst_units\data\uniform\odst_darren_l0_armor.paa"
+	};
+};
+
+class 22nd_odst_marpat_darren: 22nd_odst_darren
+{
+	scope=2;
+	scopeCurator=1;
+	scopeArsenal = 2;
+	displayName="[ODST] Marpat D.Darren";
+	uniformClass="22nd_ODST_marpat_darren_uniform";
+	hiddenSelections[]=
+	{
+		"camo1",
+		"insignia",
+		"clan"
+	};
+	hiddenSelectionsTextures[]=
+	{
+		"22_odst_units\data\uniform\odst_darren_l0_marpat_armor.paa"
+	};
+};
+
+class 22nd_odst_marpat_desert_darren: 22nd_odst_darren
+{
+	scope=2;
+	scopeCurator=1;
+	scopeArsenal = 2;
+	displayName="[ODST] Marpat Desert D.Darren";
+	uniformClass="22nd_ODST_marpat_desert_darren_uniform";
+	hiddenSelections[]=
+	{
+		"camo1",
+		"insignia",
+		"clan"
+	};
+	hiddenSelectionsTextures[]=
+	{
+		"22_odst_units\data\uniform\odst_darren_l0_marpat_desert_armor.paa"
 	};
 };
 	
@@ -551,6 +694,44 @@ class 22nd_odst_barkhorn: 22nd_odst_base
 	};
 };
 
+class 22nd_odst_marpat_barkhorn: 22nd_odst_barkhorn
+{
+	scope=2;
+	scopeCurator=1;
+	scopeArsenal = 2;
+	displayName="[ODST] Marpat G.Barkhorn";
+	uniformClass="22nd_ODST_marpat_barkhorn_uniform";
+	hiddenSelections[]=
+	{
+		"camo1",
+		"insignia",
+		"clan"
+	};
+	hiddenSelectionsTextures[]=
+	{
+		"22_odst_units\data\uniform\odst_barkhorn_l0_marpat_armor.paa"
+	};
+};
+
+class 22nd_odst_marpat_desert_barkhorn: 22nd_odst_barkhorn
+{
+	scope=2;
+	scopeCurator=1;
+	scopeArsenal = 2;
+	displayName="[ODST] Marpat Desert G.Barkhorn";
+	uniformClass="22nd_ODST_marpat_desert_barkhorn_uniform";
+	hiddenSelections[]=
+	{
+		"camo1",
+		"insignia",
+		"clan"
+	};
+	hiddenSelectionsTextures[]=
+	{
+		"22_odst_units\data\uniform\odst_barkhorn_l0_marpat_desert_armor.paa"
+	};
+};
+
 ///litch\\\
 
 class 22nd_odst_litch: 22nd_odst_base
@@ -620,6 +801,44 @@ class 22nd_odst_litch: 22nd_odst_base
 	hiddenSelectionsTextures[]=
 	{
 		"22_odst_units\data\uniform\odst_litch_l0_armor.paa"
+	};
+};
+
+class 22nd_odst_marpat_litch: 22nd_odst_litch
+{
+	scope=2;
+	scopeCurator=1;
+	scopeArsenal = 2;
+	displayName="[ODST] Marpat J.Litch";
+	uniformClass="22nd_ODST_marpat_litch_uniform";
+	hiddenSelections[]=
+	{
+		"camo1",
+		"insignia",
+		"clan"
+	};
+	hiddenSelectionsTextures[]=
+	{
+		"22_odst_units\data\uniform\odst_litch_l0_marpat_armor.paa"
+	};
+};
+
+class 22nd_odst_marpat_desert_litch: 22nd_odst_litch
+{
+	scope=2;
+	scopeCurator=1;
+	scopeArsenal = 2;
+	displayName="[ODST] Marpat Desert J.Litch";
+	uniformClass="22nd_ODST_marpat_desert_litch_uniform";
+	hiddenSelections[]=
+	{
+		"camo1",
+		"insignia",
+		"clan"
+	};
+	hiddenSelectionsTextures[]=
+	{
+		"22_odst_units\data\uniform\odst_litch_l0_marpat_desert_armor.paa"
 	};
 };
 	
@@ -693,7 +912,44 @@ class 22nd_odst_nathan: 22nd_odst_base
 	{
 		"22_odst_units\data\uniform\odst_nathan_l0_armor.paa"
 	};
+};
 
+class 22nd_odst_marpat_nathan: 22nd_odst_nathan
+{
+	scope=2;
+	scopeCurator=1;
+	scopeArsenal = 2;
+	displayName="[ODST] Marpat N.Parker";
+	uniformClass="22nd_ODST_marpat_nathan_uniform";
+	hiddenSelections[]=
+	{
+		"camo1",
+		"insignia",
+		"clan"
+	};
+	hiddenSelectionsTextures[]=
+	{
+		"22_odst_units\data\uniform\odst_nathan_l0_marpat_armor.paa"
+	};
+};
+
+class 22nd_odst_marpat_desert_nathan: 22nd_odst_nathan
+{
+	scope=2;
+	scopeCurator=1;
+	scopeArsenal = 2;
+	displayName="[ODST] Marpat Desert N.Parker";
+	uniformClass="22nd_ODST_marpat_desert_nathan_uniform";
+	hiddenSelections[]=
+	{
+		"camo1",
+		"insignia",
+		"clan"
+	};
+	hiddenSelectionsTextures[]=
+	{
+		"22_odst_units\data\uniform\odst_nathan_l0_marpat_desert_armor.paa"
+	};
 };
 
 //whooda\\
@@ -769,6 +1025,46 @@ class 22nd_odst_whooda: 22nd_odst_base
 	};
 };
 
+class 22nd_odst_marpat_whooda: 22nd_odst_whooda
+{
+	scope=2;
+	scopeCurator=1;
+	scopeArsenal = 2;
+	displayName="[ODST] Marpat J.Whooda";
+	uniformClass="22nd_ODST_marpat_whooda_uniform";
+	hiddenSelections[]=
+	{
+		"camo1",
+		"insignia",
+		"clan"
+	};
+	hiddenSelectionsTextures[]=
+	{
+		"22_odst_units\data\uniform\odst_whooda_l0_marpat_armor.paa"
+	};
+};
+
+class 22nd_odst_marpat_desert_whooda: 22nd_odst_whooda
+{
+	scope=2;
+	scopeCurator=1;
+	scopeArsenal = 2;
+	displayName="[ODST] Marpat Desert J.Whooda";
+	uniformClass="22nd_ODST_marpat_desert_whooda_uniform";
+	hiddenSelections[]=
+	{
+		"camo1",
+		"insignia",
+		"clan"
+	};
+	hiddenSelectionsTextures[]=
+	{
+		"22_odst_units\data\uniform\odst_whooda_l0_marpat_desert_armor.paa"
+	};
+};
+
+///default\\\
+
 class 22nd_odst_default: 22nd_odst_base
 {
 	scope=2;
@@ -836,5 +1132,43 @@ class 22nd_odst_default: 22nd_odst_base
 	hiddenSelectionsTextures[]=
 	{
 		"22_odst_units\data\uniform\odst_default_l0_armor.paa"
+	};
+};
+
+class 22nd_odst_marpat_default: 22nd_odst_default
+{
+	scope=2;
+	scopeCurator=1;
+	scopeArsenal = 2;
+	displayName="[ODST] Marpat Soldier";
+	uniformClass="22nd_ODST_marpat_default_uniform";
+	hiddenSelections[]=
+	{
+		"camo1",
+		"insignia",
+		"clan"
+	};
+	hiddenSelectionsTextures[]=
+	{
+		"22_odst_units\data\uniform\odst_default_l0_marpat_armor.paa"
+	};
+};
+
+class 22nd_odst_marpat_desert_default: 22nd_odst_default
+{
+	scope=2;
+	scopeCurator=1;
+	scopeArsenal = 2;
+	displayName="[ODST] Marpat Desert Soldier";
+	uniformClass="22nd_ODST_marpat_desert_default_uniform";
+	hiddenSelections[]=
+	{
+		"camo1",
+		"insignia",
+		"clan"
+	};
+	hiddenSelectionsTextures[]=
+	{
+		"22_odst_units\data\uniform\odst_default_l0_marpat_desert_armor.paa"
 	};
 };
