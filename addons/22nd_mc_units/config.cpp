@@ -30,7 +30,7 @@ class cfgVehicleClasses
 {
 	class 22nd_Infantry_MC_class
 	{
-		displayName = "Infantry (MC)";
+		displayName = "Infantry [MC]";
 		author = "Sgt N.Parker";
 		scope=2;
 		scopeArsenal=2;
