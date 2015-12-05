@@ -1,0 +1,19 @@
+Rifleman
+Teamleader
+Automatic Rifleman
+Asst. Automatic Rifleman
+Rifleman [AT]
+
+
+==To-Do==
+Rifleman [DM]
+Squad Leader
+Medic
+RTO
+Officer
+Demolitions
+Sniper
+
+
+==Needed Factions/Items==
+Desert Faction/Clothing
