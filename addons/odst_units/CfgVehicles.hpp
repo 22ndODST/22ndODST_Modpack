@@ -244,7 +244,7 @@ class 22nd_odst_kripto202: 22nd_odst_base
 	};
 	hiddenSelectionsTextures[]=
 	{
-		"22_odst_units\data\uniform\odst_kripto202_l0_armor.paa"
+		"\z\22nd\addons\odst_units\data\uniform\odst_kripto202_l0_armor.paa"
 	};
 };
 
@@ -264,7 +264,7 @@ class 22nd_odst_marpat_kripto202: 22nd_odst_kripto202
 	};
 	hiddenSelectionsTextures[]=
 	{
-		"22_odst_units\data\uniform\odst_kripto202_l0_marpat_armor.paa"
+		"\z\22nd\addons\odst_units\data\uniform\odst_kripto202_l0_marpat_armor.paa"
 	};
 };
 
@@ -284,7 +284,7 @@ class 22nd_odst_marpat_desert_kripto202: 22nd_odst_kripto202
 	};
 	hiddenSelectionsTextures[]=
 	{
-		"22_odst_units\data\uniform\odst_kripto202_l0_marpat_desert_armor.paa"
+		"\z\22nd\addons\odst_units\data\uniform\odst_kripto202_l0_marpat_desert_armor.paa"
 	};
 };
 
@@ -359,7 +359,7 @@ class 22nd_odst_garrus: 22nd_odst_base
 	};
 	hiddenSelectionsTextures[]=
 	{
-		"22_odst_units\data\uniform\odst_garrus_l0_armor.paa"
+		"\z\22nd\addons\odst_units\data\uniform\odst_garrus_l0_armor.paa"
 	};
 };
 
@@ -378,7 +378,7 @@ class 22nd_odst_marpat_garrus: 22nd_odst_garrus
 	};
 	hiddenSelectionsTextures[]=
 	{
-		"22_odst_units\data\uniform\odst_garrus_l0_marpat_armor.paa"
+		"\z\22nd\addons\odst_units\data\uniform\odst_garrus_l0_marpat_armor.paa"
 	};
 };
 
@@ -397,7 +397,7 @@ class 22nd_odst_marpat_desert_garrus: 22nd_odst_garrus
 	};
 	hiddenSelectionsTextures[]=
 	{
-		"22_odst_units\data\uniform\odst_garrus_l0_marpat_desert_armor.paa"
+		"\z\22nd\addons\odst_units\data\uniform\odst_garrus_l0_marpat_desert_armor.paa"
 	};
 };
 
@@ -470,7 +470,7 @@ class 22nd_odst_browerxd: 22nd_odst_base
 	};
 	hiddenSelectionsTextures[]=
 	{
-		"22_odst_units\data\uniform\odst_browerxd_l0_armor.paa"
+		"\z\22nd\addons\odst_units\data\uniform\odst_browerxd_l0_armor.paa"
 	};
 };
 
@@ -489,7 +489,7 @@ class 22nd_odst_marpat_browerxd: 22nd_odst_browerxd
 	};
 	hiddenSelectionsTextures[]=
 	{
-		"22_odst_units\data\uniform\odst_browerxd_l0_marpat_armor.paa"
+		"\z\22nd\addons\odst_units\data\uniform\odst_browerxd_l0_marpat_armor.paa"
 	};
 };
 
@@ -508,7 +508,7 @@ class 22nd_odst_marpat_desert_browerxd: 22nd_odst_browerxd
 	};
 	hiddenSelectionsTextures[]=
 	{
-		"22_odst_units\data\uniform\odst_browerxd_l0_marpat_desert_armor.paa"
+		"\z\22nd\addons\odst_units\data\uniform\odst_browerxd_l0_marpat_desert_armor.paa"
 	};
 };
 
@@ -580,7 +580,7 @@ class 22nd_odst_darren: 22nd_odst_base
 	};
 	hiddenSelectionsTextures[]=
 	{
-		"22_odst_units\data\uniform\odst_darren_l0_armor.paa"
+		"\z\22nd\addons\odst_units\data\uniform\odst_darren_l0_armor.paa"
 	};
 };
 
@@ -599,7 +599,7 @@ class 22nd_odst_marpat_darren: 22nd_odst_darren
 	};
 	hiddenSelectionsTextures[]=
 	{
-		"22_odst_units\data\uniform\odst_darren_l0_marpat_armor.paa"
+		"\z\22nd\addons\odst_units\data\uniform\odst_darren_l0_marpat_armor.paa"
 	};
 };
 
@@ -618,10 +618,10 @@ class 22nd_odst_marpat_desert_darren: 22nd_odst_darren
 	};
 	hiddenSelectionsTextures[]=
 	{
-		"22_odst_units\data\uniform\odst_darren_l0_marpat_desert_armor.paa"
+		"\z\22nd\addons\odst_units\data\uniform\odst_darren_l0_marpat_desert_armor.paa"
 	};
 };
-	
+
 ///barkhorn\\\
 
 class 22nd_odst_barkhorn: 22nd_odst_base
@@ -690,7 +690,7 @@ class 22nd_odst_barkhorn: 22nd_odst_base
 	};
 	hiddenSelectionsTextures[]=
 	{
-		"22_odst_units\data\uniform\odst_barkhorn_l0_armor.paa"
+		"\z\22nd\addons\odst_units\data\uniform\odst_barkhorn_l0_armor.paa"
 	};
 };
 
@@ -709,7 +709,7 @@ class 22nd_odst_marpat_barkhorn: 22nd_odst_barkhorn
 	};
 	hiddenSelectionsTextures[]=
 	{
-		"22_odst_units\data\uniform\odst_barkhorn_l0_marpat_armor.paa"
+		"\z\22nd\addons\odst_units\data\uniform\odst_barkhorn_l0_marpat_armor.paa"
 	};
 };
 
@@ -728,7 +728,7 @@ class 22nd_odst_marpat_desert_barkhorn: 22nd_odst_barkhorn
 	};
 	hiddenSelectionsTextures[]=
 	{
-		"22_odst_units\data\uniform\odst_barkhorn_l0_marpat_desert_armor.paa"
+		"\z\22nd\addons\odst_units\data\uniform\odst_barkhorn_l0_marpat_desert_armor.paa"
 	};
 };
 
@@ -800,7 +800,7 @@ class 22nd_odst_litch: 22nd_odst_base
 	};
 	hiddenSelectionsTextures[]=
 	{
-		"22_odst_units\data\uniform\odst_litch_l0_armor.paa"
+		"\z\22nd\addons\odst_units\data\uniform\odst_litch_l0_armor.paa"
 	};
 };
 
@@ -819,7 +819,7 @@ class 22nd_odst_marpat_litch: 22nd_odst_litch
 	};
 	hiddenSelectionsTextures[]=
 	{
-		"22_odst_units\data\uniform\odst_litch_l0_marpat_armor.paa"
+		"\z\22nd\addons\odst_units\data\uniform\odst_litch_l0_marpat_armor.paa"
 	};
 };
 
@@ -838,10 +838,10 @@ class 22nd_odst_marpat_desert_litch: 22nd_odst_litch
 	};
 	hiddenSelectionsTextures[]=
 	{
-		"22_odst_units\data\uniform\odst_litch_l0_marpat_desert_armor.paa"
+		"\z\22nd\addons\odst_units\data\uniform\odst_litch_l0_marpat_desert_armor.paa"
 	};
 };
-	
+
 ///nathan\\\
 
 class 22nd_odst_nathan: 22nd_odst_base
@@ -910,7 +910,7 @@ class 22nd_odst_nathan: 22nd_odst_base
 	};
 	hiddenSelectionsTextures[]=
 	{
-		"22_odst_units\data\uniform\odst_nathan_l0_armor.paa"
+		"\z\22nd\addons\odst_units\data\uniform\odst_nathan_l0_armor.paa"
 	};
 };
 
@@ -929,7 +929,7 @@ class 22nd_odst_marpat_nathan: 22nd_odst_nathan
 	};
 	hiddenSelectionsTextures[]=
 	{
-		"22_odst_units\data\uniform\odst_nathan_l0_marpat_armor.paa"
+		"\z\22nd\addons\odst_units\data\uniform\odst_nathan_l0_marpat_armor.paa"
 	};
 };
 
@@ -948,7 +948,7 @@ class 22nd_odst_marpat_desert_nathan: 22nd_odst_nathan
 	};
 	hiddenSelectionsTextures[]=
 	{
-		"22_odst_units\data\uniform\odst_nathan_l0_marpat_desert_armor.paa"
+		"\z\22nd\addons\odst_units\data\uniform\odst_nathan_l0_marpat_desert_armor.paa"
 	};
 };
 
@@ -1021,7 +1021,7 @@ class 22nd_odst_whooda: 22nd_odst_base
 	};
 	hiddenSelectionsTextures[]=
 	{
-		"22_odst_units\data\uniform\odst_whooda_l0_armor.paa"
+		"\z\22nd\addons\odst_units\data\uniform\odst_whooda_l0_armor.paa"
 	};
 };
 
@@ -1040,7 +1040,7 @@ class 22nd_odst_marpat_whooda: 22nd_odst_whooda
 	};
 	hiddenSelectionsTextures[]=
 	{
-		"22_odst_units\data\uniform\odst_whooda_l0_marpat_armor.paa"
+		"\z\22nd\addons\odst_units\data\uniform\odst_whooda_l0_marpat_armor.paa"
 	};
 };
 
@@ -1059,7 +1059,7 @@ class 22nd_odst_marpat_desert_whooda: 22nd_odst_whooda
 	};
 	hiddenSelectionsTextures[]=
 	{
-		"22_odst_units\data\uniform\odst_whooda_l0_marpat_desert_armor.paa"
+		"\z\22nd\addons\odst_units\data\uniform\odst_whooda_l0_marpat_desert_armor.paa"
 	};
 };
 
@@ -1131,7 +1131,7 @@ class 22nd_odst_default: 22nd_odst_base
 	};
 	hiddenSelectionsTextures[]=
 	{
-		"22_odst_units\data\uniform\odst_default_l0_armor.paa"
+		"\z\22nd\addons\odst_units\data\uniform\odst_default_l0_armor.paa"
 	};
 };
 
@@ -1150,7 +1150,7 @@ class 22nd_odst_marpat_default: 22nd_odst_default
 	};
 	hiddenSelectionsTextures[]=
 	{
-		"22_odst_units\data\uniform\odst_default_l0_marpat_armor.paa"
+		"\z\22nd\addons\odst_units\data\uniform\odst_default_l0_marpat_armor.paa"
 	};
 };
 
@@ -1169,6 +1169,6 @@ class 22nd_odst_marpat_desert_default: 22nd_odst_default
 	};
 	hiddenSelectionsTextures[]=
 	{
-		"22_odst_units\data\uniform\odst_default_l0_marpat_desert_armor.paa"
+		"\z\22nd\addons\odst_units\data\uniform\odst_default_l0_marpat_desert_armor.paa"
 	};
 };
