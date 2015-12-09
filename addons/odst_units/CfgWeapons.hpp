@@ -75,24 +75,109 @@ class cfgWeapons {
       };
     };
   };
-
+	class OPTRE_UNSC_ODST_Helmet_mKripto_dp: OPTRE_UNSC_ODST_Helmet_mKripto
+	{
+    author="22nd ODST Dev Team";
+    scopeArsenal=1;
+    scopeCurator=1;
+    hiddenSelectionsTextures[]=
+    {
+      PATHTOF(data\helmet\odst_kripto202_l0_helmet.paa),
+      "\optre_vehicles\pelican\data\glass_ca.paa"
+    };
+    hiddenSelectionsMaterials[]=
+    {
+      "OPTRE_UNSC_Units\ODST\data\helmet.rvmat",
+      "\optre_vehicles\pelican\data\reflective_glass.rvmat"
+    };
+    class ItemInfo: ItemInfo
+    {
+      hiddenSelectionsTextures[]=
+      {
+        PATHTOF(data\helmet\odst_kripto202_l0_helmet.paa),
+        "\optre_vehicles\pelican\data\glass_ca.paa"
+      };
+      hiddenSelectionsMaterials[]=
+      {
+        "OPTRE_UNSC_Units\ODST\data\helmet.rvmat",
+        "\optre_vehicles\pelican\data\reflective_glass.rvmat"
+      };
+    };
+  };
 	class OPTRE_UNSC_ODST_Helmet_nParker: OPTRE_UNSC_ODST_Helmet_mKripto {
-		author = "22nd ODST Dev Team";
-		picture="\OPTRE_UNSC_Units\ODST\icons\odst_helmet_como.paa";
-		displayName="Helmet [N.Parker]";
+		scope = 2;
+		scopeArsenal=2;
+    author = "22nd ODST Dev Team";
+    picture="\OPTRE_UNSC_Units\ODST\icons\odst_helmet_como.paa";
+    displayName="Helmet [N.White]";
+    model="\OPTRE_UNSC_Units\ODST\helmet.p3d";
+    hiddenSelections[]=
+    {
+			"camo1",
+      "camo2",
+      "attach_cam",
+      "attach_flashlight",
+      "attach_laser",
+      "attach_mount",
+      "attach_rangefinder",
+      "attach_rebreather"
+    };
     hiddenSelectionsTextures[]=
     {
       PATHTOF(data\helmet\odst_nathan_l0_helmet.paa),
 	  	PATHTOF(data\helmet\odst_nathan_l0_helmet.paa)
-		};
-		class ItemInfo: HeadgearItem
-	  {
-	    hiddenSelectionsTextures[]=
-	    {
+    };
+    class ItemInfo: HeadgearItem
+    {
+      uniformModel="\OPTRE_UNSC_Units\ODST\helmet.p3d";
+      armor=10;
+      mass=40;
+      hiddenSelections[]=
+      {
+				"camo1",
+	      "camo2",
+	      "attach_cam",
+	      "attach_flashlight",
+	      "attach_laser",
+	      "attach_mount",
+	      "attach_rangefinder",
+	      "attach_rebreather"
+      };
+      hiddenSelectionsTextures[]=
+      {
 	      PATHTOF(data\helmet\odst_nathan_l0_helmet.paa),
 		  	PATHTOF(data\helmet\odst_nathan_l0_helmet.paa)
-	    };
-	  };
+      };
+    };
+  };
+	class OPTRE_UNSC_ODST_Helmet_nParker_dp: OPTRE_UNSC_ODST_Helmet_nParker
+  {
+    author="22nd ODST Dev Team";
+    scopeArsenal=1;
+    scopeCurator=1;
+    hiddenSelectionsTextures[]=
+    {
+      PATHTOF(data\helmet\odst_nathan_l0_helmet.paa),
+      "\optre_vehicles\pelican\data\glass_ca.paa"
+    };
+    hiddenSelectionsMaterials[]=
+    {
+      "OPTRE_UNSC_Units\ODST\data\helmet.rvmat",
+      "\optre_vehicles\pelican\data\reflective_glass.rvmat"
+    };
+    class ItemInfo: ItemInfo
+    {
+      hiddenSelectionsTextures[]=
+      {
+        PATHTOF(data\helmet\odst_nathan_l0_helmet.paa),
+        "\optre_vehicles\pelican\data\glass_ca.paa"
+      };
+      hiddenSelectionsMaterials[]=
+      {
+        "OPTRE_UNSC_Units\ODST\data\helmet.rvmat",
+        "\optre_vehicles\pelican\data\reflective_glass.rvmat"
+      };
+    };
   };
 
 	class V_PlateCarrier1_rgr;

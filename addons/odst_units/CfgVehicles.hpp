@@ -43,7 +43,7 @@ class cfgVehicles {
 		author = "22nd ODST Dev Team";
 		vehicleClass="22nd_Infantry_ODST_B_class";
 		uniformClass="22nd_ODST_uniform_mKripto";
-		model = "\OPTRE_UNSC_Units\ODST\uniform.p3d"
+		model = "\OPTRE_UNSC_Units\ODST\uniform.p3d";
 		hiddenSelections[] = {
 			"camo1",
 			"insignia",
@@ -93,7 +93,7 @@ class cfgVehicles {
 		author = "22nd ODST Dev Team";
 		vehicleClass="22nd_Infantry_ODST_B_class";
 		uniformClass="22nd_ODST_uniform_nParker";
-		model = "\OPTRE_UNSC_Units\ODST\uniform.p3d"
+		model = "\OPTRE_UNSC_Units\ODST\uniform.p3d";
 		hiddenSelections[] = {
 			"camo1",
 			"insignia",
