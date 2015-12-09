@@ -6,7 +6,11 @@ class CfgPatches
 	{
 		units[]=
 		{
-			"22nd_MC_Rifleman"
+			"22nd_MC_Rifleman",
+			"22nd_MC_TeamLeader",
+			"22nd_MC_AutomaticRifleman",
+			"22nd_MC_AsstAutomaticRifleman",
+			"22nd_MC_RiflemanAT"
 		};
 		weapons[]={};
 		requiredVersion=0.1;
@@ -30,7 +34,7 @@ class cfgVehicleClasses
 {
 	class 22nd_Infantry_MC_class
 	{
-		displayName = "Infantry [MC]";
+		displayName = "Marine Corps [Woodland]";
 		author = "Sgt N.Parker";
 		scope=2;
 		scopeArsenal=2;
